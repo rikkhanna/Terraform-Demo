@@ -1,4 +1,12 @@
-.DS_Store
-.idea/
-drop/
-go_build_main_go
+#  Local .terraform directories
+**/.terraform/
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+
+# .tfplan files
+*.tfplan

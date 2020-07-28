@@ -1,6 +1,11 @@
+provider "azurerm" {
+  version         = "~> 1.0"
+  subscription_id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  tenant_id       = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
 resource "azurerm_resource_group" "RG-Terraform" {
   name     = "terraform-resource-group"
-  location = "West Europe"
+  location = "West India"
 }
 
 resource "azurerm_app_service_plan" "ASP-TerraForm" {
@@ -41,7 +46,7 @@ resource "azurerm_sql_server" "terraform-sqlserver" {
   resource_group_name          = azurerm_resource_group.RG-Terraform.name
   location                     = azurerm_resource_group.RG-Terraform.location
   version                      = "12.0"
-  administrator_login          = "houssem"
+  administrator_login          = "rishabh"
   administrator_login_password = "4-v3ry-53cr37-p455w0rd"
 }
 
